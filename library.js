@@ -1,5 +1,3 @@
-// alert("JavaScript works!");
-
 /*  Author: Kevin Ward
 	Date: 6-18-2012
 	Name: Deliverable 4
@@ -46,7 +44,6 @@ ninjaLib.signal("This is a message");
 
 */
 
-/*
 var kevLib = function () {
 	// private methods
 	var daysBetween = function (d1, d2) {};
@@ -58,10 +55,10 @@ var kevLib = function () {
 		"joinStrings"  : joinStrings
 	};
 };
-var lib = kevLib();
+
+var lib = new kevLib();
 var names = ["Kevin", "Katrina", "Michael", "Sonya"];
 console.log(lib.joinStrings(names, " and "));
-*/
 
 /*
 var person = {
