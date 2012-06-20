@@ -1,13 +1,166 @@
 /*  Author: Kevin Ward
 	Date: 6-18-2012
 	Name: Deliverable 4
-	Theme: Puggle Rampage! Library
+	Theme: Library Code
 */
 
 // Say function for space saving code power!
 var say = function(message) { console.log(message); };
 
 // New Functions and stuff goes here.
+
+var kevLib = function () {
+	// private methods
+	var daysBetween = function (d1, d2) {};
+	var joinStrings = function (strings, delim) {};
+	// more code here
+	// public method & properties
+	return {
+		"daysBetween"  : daysBetween,
+		"joinStrings"  : joinStrings
+	};
+};
+
+var lib = new kevLib();
+var names = ["Kevin", "Katrina", "Michael", "Sonya"];
+console.log(lib.joinStrings(names, " and "));
+
+
+var users = {
+	"Kev": {
+		"firstName": "Kevin",
+		"lastName": "Ward",
+		"address": "337 S. Lazona Drive",
+		"city": "Mesa",
+		"state": "Arizona",
+		"zip": "85204",
+		"phoneNumber": "602-459-2236",
+		"email": "Xalicus@fullsail.edu"
+	},
+	"Katt": {
+		"firstName": "Katrina",
+		"lastName": "Ward",
+		"address": "337 S. Lazona Drive",
+		"city": "Mesa",
+		"state": "Arizona",
+		"zip": "85204",
+		"phoneNumber": "602-384-7960",
+		"email": "HerEmail@gmail.com"
+	},
+	"Sonya": {
+		"firstName": "Sonya",
+		"lastName": "Shilling",
+		"address": "814 W. Pecos Road",
+		"city": "Mesa",
+		"state": "Arizona",
+		"zip": "85210",
+		"phoneNumber": "602-460-4407",
+		"email": "mikamairai@gmail.com"
+	},
+	"Michael": {
+		"firstName": "Michael",
+		"lastName": "Lamoreaux",
+		"address": "814 W. Pecos Road",
+		"city": "Mesa",
+		"state": "Arizona",
+		"zip": "85210",
+		"phoneNumber": "Unknown",
+		"email": "mikeofdoom@hotmail.com"
+	}
+};
+
+var json = {
+	"dogs": [
+		{
+			"UUID": 01,
+			"name": "Snoopy",
+			"sex": "male",
+			"sex2": "him",
+			"heShe": "he",
+			"age": 8,
+			"breed": "Chihuahua",
+			"nickName": "Handsome Man",
+			"eatsBones": "eats them slowly"
+		},
+		{
+			"UUID": 02,
+			"name": "Fenix",
+			"sex": "female",
+			"sex2": "her",
+			"heShe": "she",
+			"age": 5,
+			"breed": "Puggle",
+			"nickName": "Pretty Girl",
+			"eatsBones": "eats them quickly"
+		},
+		{
+			"UUID": 03,
+			"name": "Harley",
+			"sex": "male",
+			"sex2": "him",
+			"heShe": "he",
+			"age": 1,
+			"breed": "Shar Pei",
+			"nickName": "A pain in the butt",
+			"eatsBones": "just devours them"
+		}
+	]
+};
+
+
+
+
+
+var kevName = users.Kev["firstName"] + " " + users.Kev["lastName"];
+var kevAddress = users.Kev["address"] + "\n" + users.Kev["city"] + 
+				", " + users.Kev["state"] + " " + users.Kev["zip"];
+var kevPhone = users.Kev["phoneNumber"];
+var kevEmail = users.Kev["email"];
+var KevinLabel = kevName + "\n" + kevAddress + "\n" + kevPhone + "\n" + kevEmail;
+
+var kattName = users.Katt["firstName"] + " " + users.Katt["lastName"];
+var kattAddress = users.Katt["address"] + "\n" + users.Katt["city"] + 
+				", " + users.Katt["state"] + " " + users.Katt["zip"];
+var kattPhone = users.Katt["phoneNumber"];
+var kattEmail = users.Katt["email"];
+var KattLabel = kattName + "\n" + kattAddress + "\n" + kattPhone + "\n" + kattEmail;
+
+var sonyaName = users.Sonya["firstName"] + " " + users.Sonya["lastName"];
+var sonyaAddress = users.Sonya["address"] + "\n" + users.Sonya["city"] +
+				", " + users.Sonya["state"] + " " + users.Sonya["zip"];
+var sonyaPhone = users.Sonya["phoneNumber"];
+var sonyaEmail = users.Sonya["email"];
+var SonyaLabel = sonyaName + "\n" + sonyaAddress + "\n" + sonyaPhone + "\n" + sonyaEmail;
+
+console.log(KevinLabel);
+console.log(KattLabel);
+console.log(SonyaLabel);
+
+for (var key in users.Kev) {
+		var user = users.Kev[key];
+		console.log(user.Name);
+};
+
+/*
+for (var key in json.dogs) {
+		var dog = json.dogs[key];
+		say("\"One of the dog's names is " + dog.name + ".\"");
+		say("\"" + dog.name + " is " + dog.age + " years old, and is a " 
+			+ dog.sex + " " + dog.breed + ".\"");
+		say("\"We like to call " + dog.sex2 + " " + dog.nickName + ".\"");
+		say("\"We give the dogs bones every once in a while, and " + dog.heShe 
+			+ " " + dog.eatsBones + "!\"");
+	};
+*/
+
+
+
+
+
+
+
+
+
 
 /*
 var makeSandwich = function (bread, meat, toppings) {
@@ -44,64 +197,8 @@ ninjaLib.signal("This is a message");
 
 */
 
-var kevLib = function () {
-	// private methods
-	var daysBetween = function (d1, d2) {};
-	var joinStrings = function (strings, delim) {};
-	// more code here
-	// public method & properties
-	return {
-		"daysBetween"  : daysBetween,
-		"joinStrings"  : joinStrings
-	};
-};
 
-var lib = new kevLib();
-var names = ["Kevin", "Katrina", "Michael", "Sonya"];
-console.log(lib.joinStrings(names, " and "));
 
-/*
-var person = {
-	"Kev": {
-		"firstName": "Kevin",
-		"lastName": "Ward",
-		"address": "337 S. Lazona Drive",
-		"city": "Mesa",
-		"state": "Arizona",
-		"zip": "85204",
-		"phoneNumber": "602-459-2236",
-		"email": "Xalicus@fullsail.edu"
-	},
-	"Katt": {
-		"firstName": "Katrina",
-		"lastName": "Ward",
-		"address": "337 S. Lazona Drive",
-		"city": "Mesa",
-		"state": "Arizona",
-		"zip": "85204",
-		"phoneNumber": "602-384-7960",
-		"email": "HerEmail@gmail.com"
-	}
-};
-
-var kevName = person.Kev["firstName"] + " " + person.Kev["lastName"];
-var kevAddress = person.Kev["address"] + "\n" + person.Kev["city"] + 
-				", " + person.Kev["state"] + " " + person.Kev["zip"];
-var kevPhone = person.Kev["phoneNumber"];
-var kevEmail = person.Kev["email"];
-var KevinLabel = kevName + "\n" + kevAddress + "\n" + kevPhone + "\n" + kevEmail
-
-var kattName = person.Katt["firstName"] + " " + person.Katt["lastName"];
-var kattAddress = person.Katt["address"] + "\n" + person.Katt["city"] + 
-				", " + person.Katt["state"] + " " + person.Katt["zip"];
-var kattPhone = person.Katt["phoneNumber"];
-var kattEmail = person.Katt["email"];
-var KattLabel = kattName + "\n" + kattAddress + "\n" + kattPhone + "\n" + kattEmail
-
-console.log(KevinLabel);
-console.log(KattLabel);
-
-*/
 
 
 

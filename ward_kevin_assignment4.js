@@ -1,9 +1,7 @@
-// alert("JavaScript works!");
-
 /*  Author: Kevin Ward
 	Date: 6-18-2012
 	Name: Deliverable 4
-	Theme: Puggle Rampage! Library
+	Theme: Library Testing Code
 */
 
 // Say function for space saving code power!
