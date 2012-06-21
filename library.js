@@ -23,16 +23,16 @@ var kevLib = function () {
 		};
 	};
 
-/*	
+
 	// Email Function
-	var checkEmail = function () {
-		if () {
-		
+	var checkEmail = function (emailAdd) {
+		if (/^([a-z0-9])([\w\.\-\+])+([a-z0-9])\@((\w)([\w\-]?)+\.)+([a-z]{2,6})$/i.test(emailAdd)) {
+	    	return say("That\'s a great email! " + emailAdd);
 		} else {
-		
+			return say("Really?!? " + emailAdd + " You aren\'t even trying are you???");
 		};
 	};
-	
+/*	
 	// URL Function
 	var checkUrl = function () {
 		if () {
@@ -82,7 +82,7 @@ var kevLib = function () {
 	// These are my Public Methods & Properties.
 	return {
 		"checkPhone"		: checkPhone,
-//		"checkEmail"		: checkEmail,
+		"checkEmail"		: checkEmail,
 //		"checkUrl"			: checkUrl,
 //		"checkMoney"		: checkMoney,
 //		"checkStringNumber"	: checkStringNumber,
@@ -180,38 +180,20 @@ var kevAddress = users.Kev["address"] + "\n" + users.Kev["city"] +
 var kevPhone = users.Kev["phoneNumber"];
 var kevEmail = users.Kev["email"];
 var kevWeb = users.Kev["website"];
-var KevinLabel = kevName + "\n" + kevAddress + "\n" + kevPhone + "\n" + kevEmail;
-
-/*
-var kattName = users.Katt["firstName"] + " " + users.Katt["lastName"];
-var kattAddress = users.Katt["address"] + "\n" + users.Katt["city"] + 
-				", " + users.Katt["state"] + " " + users.Katt["zip"];
-var kattPhone = users.Katt["phoneNumber"];
-var kattEmail = users.Katt["email"];
-var KattLabel = kattName + "\n" + kattAddress + "\n" + kattPhone + "\n" + kattEmail;
-
-var sonyaName = users.Sonya["firstName"] + " " + users.Sonya["lastName"];
-var sonyaAddress = users.Sonya["address"] + "\n" + users.Sonya["city"] +
-				", " + users.Sonya["state"] + " " + users.Sonya["zip"];
-var sonyaPhone = users.Sonya["phoneNumber"];
-var sonyaEmail = users.Sonya["email"];
-var SonyaLabel = sonyaName + "\n" + sonyaAddress + "\n" + sonyaPhone + "\n" + sonyaEmail;
-
+var KevinLabel = kevName + "\n" + kevAddress + "\n" + kevPhone + "\n" + kevEmail + "\n" + kevWeb;
 
 console.log(KevinLabel);
-console.log(KattLabel);
-console.log(SonyaLabel);
-*/
+
 
 // Creating my new Library from kevLib.
 var myLib = new kevLib();
 
 // Checking my phone function code.
 say(myLib.checkPhone(kevPhone));
-/*
+
 // Checking my email function code.
 say(myLib.checkEmail(kevEmail));
-
+/*
 // Checking my URL function code.
 say(myLib.checkUrl(kevWeb));
 
