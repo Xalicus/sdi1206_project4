@@ -11,8 +11,27 @@ var say = function(message) { console.log(message); };
 
 var kevLib = function () {
 	// private methods
-	var daysBetween = function (d1, d2) {};
-	var joinStrings = function (strings, delim) {};
+	// Phone Number Function
+	
+	// Email Function
+	
+	// URL Function
+	
+	// Money Number Function
+	
+	// String Number Function
+	
+	// Hours Difference Function
+	
+	
+	
+	
+	var daysBetween = function (d1, d2) {
+	
+	};
+	var joinStrings = function (strings, delim) {
+	
+	};
 	// more code here
 	// public method & properties
 	return {
@@ -21,9 +40,9 @@ var kevLib = function () {
 	};
 };
 
-var lib = new kevLib();
+var myLib = new kevLib();
 var names = ["Kevin", "Katrina", "Michael", "Sonya"];
-console.log(lib.joinStrings(names, " and "));
+console.log(myLib.joinStrings(names, " and "));
 
 
 var users = {
