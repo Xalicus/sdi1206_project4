@@ -17,9 +17,11 @@ var kevLib = function () {
 		var num = /\(?\d{3}\)?([-\/\.])\d{3}\1\d{4}/;
 		var OK = num.exec(phoneNumber);
 		if (!OK) {
-			return say(phoneNumber + " is not a phone number! Try again...");
+			say(phoneNumber + " is not a phone number! Try again...");
+			return false;
 		} else {
-			return say("Thanks a lot, your number is " + OK[0]);
+			say("Thanks a lot, your number is " + OK[0]);
+			return true;
 		};
 	};
 
@@ -27,21 +29,27 @@ var kevLib = function () {
 	// Email Function
 	var checkEmail = function (emailAdd) {
 		if (/^([a-z0-9])([\w\.\-\+])+([a-z0-9])\@((\w)([\w\-]?)+\.)+([a-z]{2,6})$/i.test(emailAdd)) {
-	    	return say("That\'s a great email! " + emailAdd);
+	    	say("That\'s a great email! " + emailAdd);
+	    	return true;
 		} else {
-			return say("Really?!? " + emailAdd + " You aren\'t even trying are you???");
+			say("Really?!? " + emailAdd + " You aren\'t even trying are you???");
+			return false;
 		};
 	};
-/*	
+
 	// URL Function
-	var checkUrl = function () {
-		if () {
-		
+	var checkUrl = function (url) {
+		var validUrl = new RegExp("^(http|https|ftp)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\-\._\?\,\'/\\\+&amp;%\$#\=~])*$");
+		if (!validUrl) {
+			say("That url is not valid, try again!");
+			return false;
 		} else {
-		
+			say("Now that is a valid url.");
+			return true;
 		};
 	};
-	
+
+/*
 	// Money Number Function
 	var checkMoney = function () {
 		if () {
@@ -50,7 +58,7 @@ var kevLib = function () {
 		
 		};
 	};
-	
+
 	// String Number Function
 	var checkStringNumber = function () {
 		if () {
@@ -59,31 +67,23 @@ var kevLib = function () {
 		
 		};
 	};
-	
+
 	// Hours Difference Function
-	var checkHours = function () {
+	var checkHours = function (h1, h2) {
 		if () {
 		
 		} else {
 		
 		};
 	};
-*/	
-	
-	
-/*	var daysBetween = function (d1, d2) {
-	
-	};
-	var joinStrings = function (strings, delim) {
-	
-	};
-	*/
+*/
+
 
 	// These are my Public Methods & Properties.
 	return {
 		"checkPhone"		: checkPhone,
 		"checkEmail"		: checkEmail,
-//		"checkUrl"			: checkUrl,
+		"checkUrl"			: checkUrl,
 //		"checkMoney"		: checkMoney,
 //		"checkStringNumber"	: checkStringNumber,
 //		"checkHours"		: checkHours
@@ -182,9 +182,7 @@ var kevEmail = users.Kev["email"];
 var kevWeb = users.Kev["website"];
 var KevinLabel = kevName + "\n" + kevAddress + "\n" + kevPhone + "\n" + kevEmail + "\n" + kevWeb;
 
-console.log(KevinLabel);
-
-
+/*
 // Creating my new Library from kevLib.
 var myLib = new kevLib();
 
@@ -193,7 +191,7 @@ say(myLib.checkPhone(kevPhone));
 
 // Checking my email function code.
 say(myLib.checkEmail(kevEmail));
-/*
+
 // Checking my URL function code.
 say(myLib.checkUrl(kevWeb));
 
