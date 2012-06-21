@@ -10,39 +10,92 @@ var say = function(message) { console.log(message); };
 // New Functions and stuff goes here.
 
 var kevLib = function () {
-	// private methods
+	// These are the Private Functions I'm going to code.
+	
 	// Phone Number Function
-	
+	var checkPhone = function () {
+		if () {
+		
+		} else {
+		
+		};
+	};
 	// Email Function
-	
+	var checkEmail = function () {
+		if () {
+		
+		} else {
+		
+		};
+	};
 	// URL Function
-	
+	var checkUrl = function () {
+		if () {
+		
+		} else {
+		
+		};
+	};
 	// Money Number Function
-	
+	var checkMoney = function () {
+		if () {
+		
+		} else {
+		
+		};
+	};
 	// String Number Function
-	
+	var checkStringNumber = function () {
+		if () {
+		
+		} else {
+		
+		};
+	};
 	// Hours Difference Function
+	var checkHours = function () {
+		if () {
+		
+		} else {
+		
+		};
+	};
 	
 	
 	
-	
-	var daysBetween = function (d1, d2) {
+/*	var daysBetween = function (d1, d2) {
 	
 	};
 	var joinStrings = function (strings, delim) {
 	
 	};
-	// more code here
-	// public method & properties
+	*/
+
+	// These are my Public Methods & Properties.
 	return {
-		"daysBetween"  : daysBetween,
-		"joinStrings"  : joinStrings
+		"checkPhone"		: checkPhone,
+		"checkEmail"		: checkEmail,
+		"checkUrl"			: checkUrl,
+		"checkMoney"		: checkMoney,
+		"checkStringNumber"	: checkStringNumber,
+		"checkHours"		: checkHours
+		
+//		"daysBetween"  : daysBetween,
+//		"joinStrings"  : joinStrings
 	};
 };
 
 var myLib = new kevLib();
-var names = ["Kevin", "Katrina", "Michael", "Sonya"];
-console.log(myLib.joinStrings(names, " and "));
+
+say(checkPhone());
+say(checkEmail());
+say(checkUrl());
+say(checkMoney());
+say(checkStringNumber());
+say(checkHours());
+
+// var names = ["Kevin", "Katrina", "Michael", "Sonya"];
+// console.log(myLib.joinStrings(names, " and "));
 
 
 var users = {
