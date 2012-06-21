@@ -13,13 +13,21 @@ var kevLib = function () {
 	// These are the Private Functions I'm going to code.
 	
 	// Phone Number Function
-	var checkPhone = function () {
-		if () {
-		
+	var checkPhone = function (phoneNumber) {
+		var end = phoneNumber.indexOf("-");
+		var start = phoneNumber.indexOf("-")+1;
+		var end1 = phoneNumber.lastIndexOf("-");
+		var start1 = phoneNumber.lastIndexOf("-")+1;
+		var end2 = phoneNumber.length;
+		if (phoneNumber.substring(0,end),
+			phoneNumber.substring(start,end1),
+			phoneNumber.substring(start1,end2)) {
+			return console.log("This is a true Phone Number.");
 		} else {
-		
+			return console.log("This is not a Phone Number, try again.");
 		};
 	};
+/*	
 	// Email Function
 	var checkEmail = function () {
 		if () {
@@ -28,6 +36,7 @@ var kevLib = function () {
 		
 		};
 	};
+	
 	// URL Function
 	var checkUrl = function () {
 		if () {
@@ -36,6 +45,7 @@ var kevLib = function () {
 		
 		};
 	};
+	
 	// Money Number Function
 	var checkMoney = function () {
 		if () {
@@ -44,6 +54,7 @@ var kevLib = function () {
 		
 		};
 	};
+	
 	// String Number Function
 	var checkStringNumber = function () {
 		if () {
@@ -52,6 +63,7 @@ var kevLib = function () {
 		
 		};
 	};
+	
 	// Hours Difference Function
 	var checkHours = function () {
 		if () {
@@ -60,7 +72,7 @@ var kevLib = function () {
 		
 		};
 	};
-	
+*/	
 	
 	
 /*	var daysBetween = function (d1, d2) {
@@ -74,30 +86,18 @@ var kevLib = function () {
 	// These are my Public Methods & Properties.
 	return {
 		"checkPhone"		: checkPhone,
-		"checkEmail"		: checkEmail,
-		"checkUrl"			: checkUrl,
-		"checkMoney"		: checkMoney,
-		"checkStringNumber"	: checkStringNumber,
-		"checkHours"		: checkHours
+//		"checkEmail"		: checkEmail,
+//		"checkUrl"			: checkUrl,
+//		"checkMoney"		: checkMoney,
+//		"checkStringNumber"	: checkStringNumber,
+//		"checkHours"		: checkHours
 		
 //		"daysBetween"  : daysBetween,
 //		"joinStrings"  : joinStrings
 	};
 };
 
-var myLib = new kevLib();
-
-say(checkPhone());
-say(checkEmail());
-say(checkUrl());
-say(checkMoney());
-say(checkStringNumber());
-say(checkHours());
-
-// var names = ["Kevin", "Katrina", "Michael", "Sonya"];
-// console.log(myLib.joinStrings(names, " and "));
-
-
+// My JSON data of users.
 var users = {
 	"Kev": {
 		"firstName": "Kevin",
@@ -107,7 +107,8 @@ var users = {
 		"state": "Arizona",
 		"zip": "85204",
 		"phoneNumber": "602-459-2236",
-		"email": "Xalicus@fullsail.edu"
+		"email": "Xalicus@fullsail.edu",
+		"website": "http://knightmage.webs.com"
 	},
 	"Katt": {
 		"firstName": "Katrina",
@@ -117,7 +118,8 @@ var users = {
 		"state": "Arizona",
 		"zip": "85204",
 		"phoneNumber": "602-384-7960",
-		"email": "HerEmail@gmail.com"
+		"email": "HerEmail@gmail.com",
+		"website": "http://kachinanova.webs.com"
 	},
 	"Sonya": {
 		"firstName": "Sonya",
@@ -127,7 +129,8 @@ var users = {
 		"state": "Arizona",
 		"zip": "85210",
 		"phoneNumber": "602-460-4407",
-		"email": "mikamairai@gmail.com"
+		"email": "mikamairai@gmail.com",
+		"website": "Unknown"
 	},
 	"Michael": {
 		"firstName": "Michael",
@@ -137,7 +140,8 @@ var users = {
 		"state": "Arizona",
 		"zip": "85210",
 		"phoneNumber": "Unknown",
-		"email": "mikeofdoom@hotmail.com"
+		"email": "mikeofdoom@hotmail.com",
+		"website": "Unknown"
 	}
 };
 
@@ -188,8 +192,10 @@ var kevAddress = users.Kev["address"] + "\n" + users.Kev["city"] +
 				", " + users.Kev["state"] + " " + users.Kev["zip"];
 var kevPhone = users.Kev["phoneNumber"];
 var kevEmail = users.Kev["email"];
+var kevWeb = users.Kev["website"];
 var KevinLabel = kevName + "\n" + kevAddress + "\n" + kevPhone + "\n" + kevEmail;
 
+/*
 var kattName = users.Katt["firstName"] + " " + users.Katt["lastName"];
 var kattAddress = users.Katt["address"] + "\n" + users.Katt["city"] + 
 				", " + users.Katt["state"] + " " + users.Katt["zip"];
@@ -204,14 +210,48 @@ var sonyaPhone = users.Sonya["phoneNumber"];
 var sonyaEmail = users.Sonya["email"];
 var SonyaLabel = sonyaName + "\n" + sonyaAddress + "\n" + sonyaPhone + "\n" + sonyaEmail;
 
-console.log(KevinLabel);
-console.log(KattLabel);
-console.log(SonyaLabel);
+*/
+// console.log(KevinLabel);
+// console.log(KattLabel);
+// console.log(SonyaLabel);
 
+
+/*
 for (var key in users.Kev) {
 		var user = users.Kev[key];
 		console.log(user.Name);
 };
+*/
+
+// Creating my new Library from kevLib.
+var myLib = new kevLib();
+
+// Checking my phone function code.
+say(myLib.checkPhone(kevPhone));
+/*
+// Checking my email function code.
+say(myLib.checkEmail(kevEmail));
+
+// Checking my URL function code.
+say(myLib.checkUrl(kevWeb));
+
+// Checking my money function code.
+say(myLib.checkMoney());
+
+// Checking my string number code.
+say(myLib.checkStringNumber());
+
+// Checking my hours function code.
+say(myLib.checkHours());
+*/
+
+// var names = ["Kevin", "Katrina", "Michael", "Sonya"];
+// console.log(myLib.joinStrings(names, " and "));
+
+
+
+
+
 
 /*
 for (var key in json.dogs) {
