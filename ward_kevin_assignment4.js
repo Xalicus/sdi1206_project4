@@ -24,11 +24,14 @@ say(myLib.checkEmail(kevEmail));
 // Checking my URL function code.
 say(myLib.checkUrl(kevWeb));
 
+say(Date());
+
 // Checking my money function code.
-say(myLib.checkMoney());
+//say(myLib.checkMoney());
 
 // Checking my string number code.
-say(myLib.checkStringNumber());
+//say(myLib.checkStringNumber());
 
 // Checking my hours function code.
-say(myLib.checkHours());
+say(myLib.checkHours(1981,07,09, 2012,05,21));
+

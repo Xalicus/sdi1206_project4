@@ -67,15 +67,55 @@ var kevLib = function () {
 		
 		};
 	};
-
+*/
 	// Hours Difference Function
-	var checkHours = function (h1, h2) {
-		if () {
+	var checkHours = function (startDate, endDate) {
 		
+		var elapsed = endDate - startDate;
+		if (true) {
+			say("Something witty goes here. " + "Elapsed time is " + elapsed);
+			return true;
 		} else {
-		
+			say("Another witty comment here.");
+			return false;
 		};
 	};
+
+
+/*
+// record start time
+var startTime = new Date();
+
+// later record end time
+var endTime = new Date();
+
+// time difference in ms
+var timeDiff = endTime - startTime;
+
+// strip the miliseconds
+var timeDiff /= 1000;
+
+// get seconds
+var seconds = Math.round(timeDiff % 60);
+
+// remove seconds from the date
+timeDiff /= Math.round(60);
+
+// get minutes
+var minutes = Math.round(timeDiff % 60);
+
+// remove minutes from the date
+timeDiff /= Math.round(60);
+
+// get hours
+var hours = Math.round(timeDiff % 24);
+
+// remove hours from the date
+timeDiff /= Math.round(24);
+
+// the rest of timeDiff is number of days
+var days = timeDays;
+
 */
 
 
@@ -86,7 +126,7 @@ var kevLib = function () {
 		"checkUrl"			: checkUrl,
 //		"checkMoney"		: checkMoney,
 //		"checkStringNumber"	: checkStringNumber,
-//		"checkHours"		: checkHours
+		"checkHours"		: checkHours
 	};
 };
 
