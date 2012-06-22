@@ -25,7 +25,6 @@ var kevLib = function () {
 		};
 	};
 
-
 	// Email Function
 	var checkEmail = function (emailAdd) {
 		if (/^([a-z0-9])([\w\.\-\+])+([a-z0-9])\@((\w)([\w\-]?)+\.)+([a-z]{2,6})$/i.test(emailAdd)) {
@@ -49,16 +48,13 @@ var kevLib = function () {
 		};
 	};
 
-/*
 	// Money Number Function
-	var checkMoney = function () {
-		if () {
-		
-		} else {
-		
-		};
+	var checkMoney = function (money) {
+		var mon = money.toFixed(2);
+		say("I have $" + mon + " cash in my wallet!");
+		return true;
 	};
-
+/*
 	// String Number Function
 	var checkStringNumber = function () {
 		if () {
@@ -82,7 +78,7 @@ var kevLib = function () {
 		"checkPhone"		: checkPhone,
 		"checkEmail"		: checkEmail,
 		"checkUrl"			: checkUrl,
-//		"checkMoney"		: checkMoney,
+		"checkMoney"		: checkMoney,
 //		"checkStringNumber"	: checkStringNumber,
 		"checkDays"			: checkDays
 	};
@@ -136,41 +132,6 @@ var users = {
 	}
 };
 
-var json = {
-	"dogs": [
-		{
-			"UUID": 01,
-			"name": "Snoopy",
-			"sex": "male",
-			"age": 8,
-			"breed": "Chihuahua",
-			"nickName": "Handsome Man",
-			"eatsBones": "eats them slowly"
-		},
-		{
-			"UUID": 02,
-			"name": "Fenix",
-			"sex": "female",
-			"age": 5,
-			"breed": "Puggle",
-			"nickName": "Pretty Girl",
-			"eatsBones": "eats them quickly"
-		},
-		{
-			"UUID": 03,
-			"name": "Harley",
-			"sex": "male",
-			"age": 1,
-			"breed": "Shar Pei",
-			"nickName": "A pain in the butt",
-			"eatsBones": "just devours them"
-		}
-	]
-};
-
-
-
-
 
 var kevName = users.Kev["firstName"] + " " + users.Kev["lastName"];
 var kevAddress = users.Kev["address"] + "\n" + users.Kev["city"] + 
@@ -180,38 +141,4 @@ var kevEmail = users.Kev["email"];
 var kevWeb = users.Kev["website"];
 var KevinLabel = kevName + "\n" + kevAddress + "\n" + kevPhone + "\n" + kevEmail + "\n" + kevWeb;
 
-/*
-// Creating my new Library from kevLib.
-var myLib = new kevLib();
-
-// Checking my phone function code.
-say(myLib.checkPhone(kevPhone));
-
-// Checking my email function code.
-say(myLib.checkEmail(kevEmail));
-
-// Checking my URL function code.
-say(myLib.checkUrl(kevWeb));
-
-// Checking my money function code.
-say(myLib.checkMoney());
-
-// Checking my string number code.
-say(myLib.checkStringNumber());
-
-// Checking my days function code.
-say(myLib.checkDays());
-*/
-
-/*
-for (var key in json.dogs) {
-		var dog = json.dogs[key];
-		say("\"One of the dog's names is " + dog.name + ".\"");
-		say("\"" + dog.name + " is " + dog.age + " years old, and is a " 
-			+ dog.sex + " " + dog.breed + ".\"");
-		say("\"We like to call " + dog.sex2 + " " + dog.nickName + ".\"");
-		say("\"We give the dogs bones every once in a while, and " + dog.heShe 
-			+ " " + dog.eatsBones + "!\"");
-	};
-*/
 

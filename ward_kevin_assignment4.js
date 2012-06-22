@@ -14,6 +14,8 @@ console.log(KevinLabel);
 
 // Creating my new Library from kevLib.
 var myLib = new kevLib();
+// Variable needed for checkMoney function
+var cash = 36923.946
 // Variables for checkDays function
 var birthday = new Date(1981, 7, 9); // My actual birthday, August 9th, 1981
 var today = new Date();
@@ -28,7 +30,7 @@ say(myLib.checkEmail(kevEmail));
 say(myLib.checkUrl(kevWeb));
 
 // Checking my money function code.
-//say(myLib.checkMoney());
+say(myLib.checkMoney(cash));
 
 // Checking my string number code.
 //say(myLib.checkStringNumber());
