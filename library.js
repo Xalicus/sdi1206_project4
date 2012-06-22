@@ -54,16 +54,19 @@ var kevLib = function () {
 		say("I have $" + mon + " cash in my wallet!");
 		return true;
 	};
-/*
+
 	// String Number Function
-	var checkStringNumber = function () {
-		if () {
-		
+	var checkStringNumber = function (strInt) {
+	var stringInt = parseInt(strInt);
+		if (strInt != stringInt) {
+			say("That's not an Integer.");
+			return false;
 		} else {
-		
+			say("The number is " + strInt);
+			return true;
 		};
 	};
-*/
+
 	// Days Difference Function
 	var checkDays = function (startDay, endDay) {
 		var aDay = 1000*60*60*24;
@@ -79,7 +82,7 @@ var kevLib = function () {
 		"checkEmail"		: checkEmail,
 		"checkUrl"			: checkUrl,
 		"checkMoney"		: checkMoney,
-//		"checkStringNumber"	: checkStringNumber,
+		"checkStringNumber"	: checkStringNumber,
 		"checkDays"			: checkDays
 	};
 };
@@ -139,6 +142,7 @@ var kevAddress = users.Kev["address"] + "\n" + users.Kev["city"] +
 var kevPhone = users.Kev["phoneNumber"];
 var kevEmail = users.Kev["email"];
 var kevWeb = users.Kev["website"];
-var KevinLabel = kevName + "\n" + kevAddress + "\n" + kevPhone + "\n" + kevEmail + "\n" + kevWeb;
+var KevinLabel = kevName + "\n" + kevAddress + "\n" + kevPhone + 
+	"\n" + kevEmail + "\n" + kevWeb;
 
 

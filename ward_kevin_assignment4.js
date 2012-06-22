@@ -4,18 +4,12 @@
 	Theme: Library Testing Code
 */
 
-// Say function for space saving code power!
-var say = function(message) { console.log(message); };
-
-// New Functions and stuff goes here.
-
-console.log(KevinLabel);
-
-
 // Creating my new Library from kevLib.
 var myLib = new kevLib();
+
 // Variable needed for checkMoney function
 var cash = 36923.946
+
 // Variables for checkDays function
 var birthday = new Date(1981, 7, 9); // My actual birthday, August 9th, 1981
 var today = new Date();
@@ -33,7 +27,7 @@ say(myLib.checkUrl(kevWeb));
 say(myLib.checkMoney(cash));
 
 // Checking my string number code.
-//say(myLib.checkStringNumber());
+say(myLib.checkStringNumber("5069"));
 
 // Checking my days function code.
 say(myLib.checkDays(birthday, today));
