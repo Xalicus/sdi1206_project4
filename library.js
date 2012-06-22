@@ -68,55 +68,13 @@ var kevLib = function () {
 		};
 	};
 */
-	// Hours Difference Function
-	var checkHours = function (startDate, endDate) {
-		
-		var elapsed = endDate - startDate;
-		if (true) {
-			say("Something witty goes here. " + "Elapsed time is " + elapsed);
-			return true;
-		} else {
-			say("Another witty comment here.");
-			return false;
-		};
+	// Days Difference Function
+	var checkDays = function (startDay, endDay) {
+		var aDay = 1000*60*60*24;
+		say(Math.ceil((endDay.getTime() - startDay.getTime())/(aDay)) + 
+			" days have gone by from " + startDay + " to " + endDay + ".");
+		return true;
 	};
-
-
-/*
-// record start time
-var startTime = new Date();
-
-// later record end time
-var endTime = new Date();
-
-// time difference in ms
-var timeDiff = endTime - startTime;
-
-// strip the miliseconds
-var timeDiff /= 1000;
-
-// get seconds
-var seconds = Math.round(timeDiff % 60);
-
-// remove seconds from the date
-timeDiff /= Math.round(60);
-
-// get minutes
-var minutes = Math.round(timeDiff % 60);
-
-// remove minutes from the date
-timeDiff /= Math.round(60);
-
-// get hours
-var hours = Math.round(timeDiff % 24);
-
-// remove hours from the date
-timeDiff /= Math.round(24);
-
-// the rest of timeDiff is number of days
-var days = timeDays;
-
-*/
 
 
 	// These are my Public Methods & Properties.
@@ -126,7 +84,7 @@ var days = timeDays;
 		"checkUrl"			: checkUrl,
 //		"checkMoney"		: checkMoney,
 //		"checkStringNumber"	: checkStringNumber,
-		"checkHours"		: checkHours
+		"checkDays"			: checkDays
 	};
 };
 
@@ -241,8 +199,8 @@ say(myLib.checkMoney());
 // Checking my string number code.
 say(myLib.checkStringNumber());
 
-// Checking my hours function code.
-say(myLib.checkHours());
+// Checking my days function code.
+say(myLib.checkDays());
 */
 
 /*
@@ -257,14 +215,3 @@ for (var key in json.dogs) {
 	};
 */
 
-
-/*
-var writePhone = function (first, second, third) {
-	// TODO: I'll fill this in later to write code.
-	say(first + " and " + second + " and " + third);
-	return { };
-};
-
-var myPhones = writePhone("Galaxy S", "Galaxy S II", ["Galaxy S III", "Galaxy S IV"]);
-
-*/
